@@ -10,6 +10,7 @@ search.on("input", function (e) {
   let value = e.target.value;
   let data = searchData(value, array);
   buildTable(data);
+  console.log("lo");
 });
 
 function searchData(value, data) {
