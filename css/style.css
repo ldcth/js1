@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 body {
   margin: 0;
@@ -13,35 +14,65 @@ body {
   text-align: left;
   background-color: #fff;
 }
-.wrapper{
-    width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
+.wrapper {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-.search-box{
-    margin: 10px 0;
+.search-box {
+  margin: 10px 0;
 }
-.form-group{
-    margin-bottom: 10px;
+.form-group {
+  margin-bottom: 10px;
 }
-.form-control{
-    padding: 6px 12px;
-    border: 1px solid;
+.form-control {
+  padding: 6px 12px;
+  border: 1px solid;
 }
-.myTable{
-    border: 1px solid purple;
-    width: 100%;
-    margin: 16px 0;
-    background-color: transparent;
-    border-collapse: collapse;
+.myTable {
+  border: 1px solid purple;
+  width: 100%;
+  margin: 16px 0;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+.arrow{
+cursor: pointer;
 }
 table,
 th,
 td {
-    
   border: 1px solid purple;
 }
 th,
 td {
-    padding: 6px;
+  padding: 6px;
+}
+th {
+  position: relative;
+}
+i {
+  cursor: pointer;
+}
+.pagination{
+display: flex;
+justify-content: end;
+}
+.button {
+  margin-left: 1px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  background: mediumpurple;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.active{
+  background: purple;
 }

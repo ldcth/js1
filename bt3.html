@@ -17,12 +17,12 @@
   <body>
     <div class="wrapper">
       <div class="top">
-        <div class="search-box">Search: <input id="search" type="text" /></div>
+        <div class="search-box">Search: 
+            <input class="search" type="text" /></div>
         <div class="form-group">
           <select
             name="state"
             class="form-control maxRows"
-            id="aioConceptName"
             style="width: 150px"
           >
             <option value="10" selected>10</option>
@@ -36,28 +36,38 @@
           <tr>
             <th>
               <span id="engine" class="headerName">Rendering engine</span>
-              <i class="fa-solid fa-arrows-up-down" value="name"></i>
+              <!-- <i class="fa-solid fa-arrows-up-down" value="name"></i> -->
+              <span class="arrow" data-name="engine" data-order="asc">&#9698</span>
             </th>
             <th>
               <span id="browser" class="headerName">Browser</span>
-              <i class="fa-solid fa-arrows-up-down" value="browser"></i>
+              <!-- <i class="fa-solid fa-arrows-up-down" value="browser"></i> -->
+              <span class="arrow" data-name="browser" data-order="asc">&#9698</span>
             </th>
             <th>
               <span id="platform" class="headerName">Platform(s)</span>
-              <i class="fa-solid fa-arrows-up-down" value="platform"></i>
+              <!-- <i class="fa-solid fa-arrows-up-down" value="platform"></i> -->
+              <span class="arrow" data-name="platform" data-order="asc">&#9698</span>
             </th>
             <th>
               <span id="engineVersion" class="headerName">Engine version</span>
-              <i class="fa-solid fa-arrows-up-down" value="engine"></i>
+              <!-- <i class="fa-solid fa-arrows-up-down" value="engine"></i> -->
+              <span class="arrow" data-name="engineVersion" data-order="asc">&#9698</span>
             </th>
             <th>
               <span id="cssGrade" class="headerName">CSS grade</span>
-              <i class="fa-solid fa-arrows-up-down" value="grade"></i>
+              <!-- <i class="fa-solid fa-arrows-up-down" value="grade"></i> -->
+              <span class="arrow" data-name="grade" data-order="asc">&#9698</span>
             </th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>
       </table>
+      <div class="pagination-container">
+        <nav>
+          <ul class="pagination"></ul>
+        </nav>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
