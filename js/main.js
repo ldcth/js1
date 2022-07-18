@@ -1,20 +1,22 @@
 import { data } from "./data.js";
-var array = data;
+let array = data;
+let page = 1;
 
 const body = $("#tbody");
 const search = $(".search");
 const pagination = $(".pagination");
 
 $(document).ready(function () {
-  var maxRows = parseInt($(".maxRows").val());
-  var page = 1;
+  let maxRows = parseInt($(".maxRows").val());
   buildTable(array, page, maxRows);
   //
   // $(".pagination li").eq(0).addClass("active");
-  pagination.on("click", "li", function () {
-    page = $(this).attr("data-page");
+  pagination.on("click", ".page", function () {
+    page = +$(this).attr("data-page");
     buildTable(array, page, maxRows);
   });
+  //
+
   //
   $(".maxRows").on("change", function () {
     maxRows = parseInt($(this).val());
@@ -32,6 +34,7 @@ $(document).ready(function () {
   $(".arrow").on("click", function (e) {
     let sort = $(this);
     let name = sort.data("name");
+    console.log(name);
     let order = sort.data("order");
     let text = "";
     if (order === "asc") {
@@ -39,7 +42,7 @@ $(document).ready(function () {
       text = "&#9650";
       array = array.sort((a, b) =>
         a[name].toLowerCase() > b[name].toLowerCase() ? 1 : -1
-      )
+      );
     } else {
       sort.data("order", "asc");
       text = "&#9660";
@@ -61,16 +64,16 @@ function buildTable(data, page, row) {
         <tr>
             <td>${data[i].engine}</td>
             <td>${data[i].browser}</td>
-            <td>${data[i].platform || "-"}</td>
-            <td>${data[i].engineVersion || "-"}</td>
+            <td>${data[i].platform}</td>
+            <td>${data[i].engineVersion}</td>
             <td>${data[i].cssGrade}</td>
         </tr>
         `;
   }
   body.html(str);
   buildNav(data.length, row);
-  $(".pagination li").removeClass("active");
-  $(".pagination li")
+  $(".pagination .page").removeClass("active");
+  $(".pagination .page")
     .eq(page - 1)
     .addClass("active");
 }
@@ -80,9 +83,37 @@ function buildNav(quantities, rows) {
   let pages = Math.ceil(quantities / rows);
   for (let i = 1; i <= pages; i++) {
     pagination.append(
-      '<li data-page = "' + i + '" class="button"><span>' + i + "</span></li>"
+      '<li data-page = "' +
+        i +
+        '" class="button_page page"><span>' +
+        i +
+        "</span></li>"
     );
   }
+  pagination.prepend(
+    '<li class="button_page" ><button id="previous">' + "Previous" + "</button></li>"
+  );
+  pagination.append(
+    '<li class="button_page" ><button id="next">' + "Next" + "</button></li>"
+  );
+  $("#previous").on("click", function () {
+    if (page === 1) {
+      $(this).attr("disabled");
+    } else {
+      page = page - 1;
+      buildTable(array, page, rows);
+    }
+    console.log(page);
+  });
+  $("#next").on("click", function () {
+    if (page === Math.ceil(array.length / rows)) {
+      $(this).attr("disabled");
+    } else {
+      page = page + 1;
+      buildTable(array, page, rows);
+    }
+    console.log(page);
+  });
 }
 //
 function searchData(value) {

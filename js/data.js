@@ -188,6 +188,7 @@ export const data = [
     engine: "Misc",
     browser: "NetFront 3.1",
     platform: "Embedded devices",
+    engineVersion: "-",
     cssGrade: "C",
   },
   {
@@ -195,6 +196,7 @@ export const data = [
     engine: "Misc",
     browser: "NetFront 3.4",
     platform: "Embedded devices",
+    engineVersion: "-",
     cssGrade: "A",
   },
   {
@@ -202,6 +204,7 @@ export const data = [
     engine: "Misc",
     browser: "Dillo 0.8",
     platform: "Embedded devices",
+    engineVersion: "-",
     cssGrade: "X",
   },
   {
@@ -209,6 +212,7 @@ export const data = [
     engine: "Misc",
     browser: "Links",
     platform: "Text only",
+    engineVersion: "-",
     cssGrade: "X",
   },
   {
@@ -216,6 +220,7 @@ export const data = [
     engine: "Misc",
     browser: "Lynx",
     platform: "Text only",
+    engineVersion: "-",
     cssGrade: "X",
   },
   {
@@ -223,6 +228,7 @@ export const data = [
     engine: "Misc",
     browser: "IE Mobile",
     platform: "Windows Mobile 6",
+    engineVersion: "-",
     cssGrade: "C",
   },
   {
@@ -230,12 +236,15 @@ export const data = [
     engine: "Misc",
     browser: "PSP browser",
     platform: "PSP",
+    engineVersion: "-",
     cssGrade: "C",
   },
   {
     id: 31,
     engine: "Other browsers",
     browser: "All others",
+    platform: "-",
+    engineVersion: "-",
     cssGrade: "U",
   },
   {
@@ -243,6 +252,7 @@ export const data = [
     engine: "Presto",
     browser: "Opera 7.0",
     platform: "Win 95+ / OSX.1+",
+    engineVersion: "-",
     cssGrade: "A",
   },
   {
@@ -250,6 +260,7 @@ export const data = [
     engine: "Presto",
     browser: "Opera 7.5",
     platform: "Win 95+ / OSX.2+",
+    engineVersion: "-",
     cssGrade: "A",
   },
   {
@@ -257,6 +268,7 @@ export const data = [
     engine: "Presto",
     browser: "Opera 8.0",
     platform: "Win 95+ / OSX.2+",
+    engineVersion: "-",
     cssGrade: "A",
   },
   {
@@ -264,6 +276,7 @@ export const data = [
     engine: "Presto",
     browser: "Opera 8.5",
     platform: "Win 95+ / OSX.2+",
+    engineVersion: "-",
     cssGrade: "A",
   },
   {
@@ -271,6 +284,7 @@ export const data = [
     engine: "Presto",
     browser: "Opera 9.0",
     platform: "Win 95+ / OSX.3+",
+    engineVersion: "-",
     cssGrade: "A",
   },
   {
@@ -278,6 +292,7 @@ export const data = [
     engine: "Presto",
     browser: "Opera 9.2",
     platform: "Win 88+ / OSX.3+",
+    engineVersion: "-",
     cssGrade: "A",
   },
   {
@@ -285,6 +300,7 @@ export const data = [
     engine: "Presto",
     browser: "Opera 9.5",
     platform: "Win 88+ / OSX.3+",
+    engineVersion: "-",
     cssGrade: "A",
   },
   {
@@ -292,6 +308,7 @@ export const data = [
     engine: "Presto",
     browser: "Opera for Wii",
     platform: "Wii",
+    engineVersion: "-",
     cssGrade: "A",
   },
   {
@@ -299,6 +316,7 @@ export const data = [
     engine: "Presto",
     browser: "Nokia N800",
     platform: "N800",
+    engineVersion: "-",
     cssGrade: "A",
   },
   {
@@ -314,6 +332,7 @@ export const data = [
     engine: "Tasman",
     browser: "Internet Explorer 4.5",
     platform: "Mac OS 8-9",
+    engineVersion: "-",
     cssGrade: "X",
   },
   {

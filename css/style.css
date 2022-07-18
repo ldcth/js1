@@ -36,8 +36,8 @@ body {
   background-color: transparent;
   border-collapse: collapse;
 }
-.arrow{
-cursor: pointer;
+.arrow {
+  cursor: pointer;
 }
 table,
 th,
@@ -54,11 +54,11 @@ th {
 i {
   cursor: pointer;
 }
-.pagination{
-display: flex;
-justify-content: end;
+.pagination {
+  display: flex;
+  justify-content: end;
 }
-.button {
+.button_page {
   margin-left: 1px;
   display: inline-block;
   font-weight: 400;
@@ -73,6 +73,14 @@ justify-content: end;
   border-radius: 0.25rem;
   cursor: pointer;
 }
-.active{
+
+.active {
   background: purple;
+}
+.button_page button {
+  padding: 0;
+  border: 0;
+  background: mediumpurple;
+  color: white;
+  cursor: pointer;
 }
