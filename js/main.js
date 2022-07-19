@@ -41,13 +41,17 @@ $(document).ready(function () {
       sort.data("order", "desc");
       text = "&#9650";
       array = array.sort((a, b) =>
-        a[name].toLowerCase() > b[name].toLowerCase() ? 1 : -1
+        a[name].toString().toLowerCase() > b[name].toString().toLowerCase()
+          ? 1
+          : -1
       );
     } else {
       sort.data("order", "asc");
       text = "&#9660";
       array = array.sort((a, b) =>
-        a[name].toLowerCase() < b[name].toLowerCase() ? 1 : -1
+        a[name].toString().toLowerCase() < b[name].toString().toLowerCase()
+          ? 1
+          : -1
       );
     }
     sort.html(text);
@@ -91,7 +95,9 @@ function buildNav(quantities, rows) {
     );
   }
   pagination.prepend(
-    '<li class="button_page" ><button id="previous">' + "Previous" + "</button></li>"
+    '<li class="button_page" ><button id="previous">' +
+      "Previous" +
+      "</button></li>"
   );
   pagination.append(
     '<li class="button_page" ><button id="next">' + "Next" + "</button></li>"
